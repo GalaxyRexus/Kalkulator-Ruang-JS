@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Judul -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">BANGUN RUANG</span>
+            <a class="btn btn-outline-primary ms-auto" href="#kubus">Kubus</a>
+            <a class="btn btn-outline-primary" href="#tabung">Tabung</a>
+            <a class="btn btn-outline-primary" href="#bola">Bola</a>
+            <a class="btn btn-outline-primary" href="#limas">Limas</a>
+        </div>
+    </nav>
+    <!-- Sub Judul -->
+    <h5 class="text-center" id="kubus">BANGUN RUANG "KUBUS"</h5>
+    <!-- Konten -->
+    <div class="card ms-3 me-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://cdn0-production-images-kly.akamaized.net/kVzypGAVI-AYpRPOwLT44iy4xfA=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3518168/original/026826900_1626957470-KUBUSSS.jpg" width="300px" class="img-thumbnail" alt="...">
+                </div>
+                <div class="col-md-6">
+                    <h4>Apa Itu Kubus?</h4><br>
+                    <p>Kubus adalah bangun ruang tiga dimensi yang memiliki enam sisi berbentuk persegi yang sama besar, dua belas rusuk yang sama panjang, dan delapan titik sudut. Semua sudut dalam kubus adalah sudut siku-siku. Kubus memiliki simetri yang tinggi dan sering digunakan sebagai dasar untuk mempelajari geometri ruang.</p>
+                    <div class="alert alert-danger" role="alert">
+                        Rumus :<br>
+                        V = p x l x t<br>
+                        L = 2(pl+pt+lt)<br>
+                        K = 4(p+l+t)<br>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <h4>Kalkulator</h4>
+                        <div class="mb-3">
+                            <label class="form-label">Panjang</label>
+                            <input type="number" class="form-control" id="panjang" placeholder="Masukkan Panjang">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Lebar</label>
+                            <input type="number" class="form-control" id="lebar" placeholder="Masukkan Lebar">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Tinggi</label>
+                            <input type="number" class="form-control" id="tinggi" placeholder="Masukkan Tinggi">
+                        </div>
+                        <div>
+                            <button type="button" onclick="Volume()" class="btn btn-primary">Volume</button>
+                            <button type="button" onclick="Luas()" class="btn btn-primary">Luas</button>
+                            <button type="button" onclick="Keliling()" class="btn btn-primary">Keliling</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Hasil</h4>
+                    <p id="tampilkanHasil"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h5 class="text-center" id="tabung">BANGUN RUANG "TABUNG"</h5>
+    <!-- Konten -->
+    <div class="card ms-3 me-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://blog-static.mamikos.com/wp-content/uploads/2024/01/macam-macam-bangun-ruang-tabung.jpg.webp" width="400px" class="img-thumbnail" alt="...">
+                </div>
+                <div class="col-md-6">
+                    <h4>Apa Itu Tabung?</h4><br>
+                    <p>Tabung adalah bangun ruang tiga dimensi yang memiliki dua sisi alas dan tutup berbentuk lingkaran yang sejajar dan kongruen, serta sebuah sisi lengkung yang menghubungkan kedua lingkaran tersebut. Bentuknya menyerupai silinder.</p>
+                    <div class="alert alert-danger" role="alert">
+                        Rumus :<br>
+                        V = π × r² × t<br>
+                        L = 2πr(r + t)<br>
+                        K = 2πr<br>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <h4>Kalkulator</h4>
+                        <div class="mb-3">
+                            <label class="form-label">Jari-Jari</label>
+                            <input type="number" class="form-control" id="jariJari" placeholder="Masukkan Jari-Jari">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Tinggi</label>
+                            <input type="number" class="form-control" id="tinggiTabung" placeholder="Masukkan Tinggi">
+                        </div>
+                        <div>
+                            <button type="button" onclick="VolumeTabung()" class="btn btn-primary">Volume</button>
+                            <button type="button" onclick="LuasTabung()" class="btn btn-primary">Luas</button>
+                            <button type="button" onclick="KelilingTabung()" class="btn btn-primary">Keliling</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Hasil</h4>
+                    <p id="tampilkanHasilTabung"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h5 class="text-center" id="bola">BANGUN RUANG "BOLA"</h5>
+    <div class="card ms-3 me-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://blog-static.mamikos.com/wp-content/uploads/2024/01/macam-macam-bangun-ruang-bola.jpg.webp" width="400px" class="img-thumbnail" alt="Bola">
+                </div>
+                <div class="col-md-6">
+                    <h4>Apa Itu Bola?</h4><br>
+                    <p>Bola adalah objek tiga dimensi dengan permukaan melengkung yang semua titiknya berada pada jarak yang sama dari pusatnya.</p>
+                    <div class="alert alert-danger" role="alert">
+                        Rumus :<br>
+                        V = 4/3 πr³ <br>
+                        L = 4 πr²<br>
+                        K = 2 πr<br>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <h4>Kalkulator</h4>
+                        <div class="mb-3">
+                            <label class="form-label">Jari-Jari</label>
+                            <input type="number" class="form-control" id="jariJariBola" placeholder="Masukkan Jari-Jari">
+                        </div>
+                        <div>
+                            <button type="button" onclick="VolumeBola()" class="btn btn-primary">Volume</button>
+                            <button type="button" onclick="LuasBola()" class="btn btn-primary">Luas</button>
+                            <button type="button" onclick="KelilingBola()" class="btn btn-primary">Keliling</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Hasil</h4>
+                    <p id="tampilkanHasilBola"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h5 class="text-center" id="limas">BANGUN RUANG "LIMAS"</h5>
+<div class="card ms-3 me-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://blog-static.mamikos.com/wp-content/uploads/2024/01/macam-macam-bangun-ruang-limas.jpg.webp" width="400px" class="img-thumbnail" alt="Limas">
+            </div>
+            <div class="col-md-6">
+                <h4>Apa Itu Limas?</h4><br>
+                <p>Limas adalah bangun ruang tiga dimensi yang memiliki alas berbentuk poligon dan sisi-sisi tegak berbentuk segitiga yang bertemu di satu titik puncak.</p>
+                <div class="alert alert-danger" role="alert">
+                    Rumus :<br>
+                    V = 1/3 x Aalas x t<br>
+                    L = Aalas + 1/2 x Palas x s<br>
+                    K = Palas = Jumlah Panjang Sisi Sisi Alas<br>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <h4>Kalkulator</h4>
+                    <div class="mb-3">
+                        <label class="form-label">Panjang Alas</label>
+                        <input type="number" class="form-control" id="panjangAlas" placeholder="Masukkan Panjang Alas">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Lebar Alas</label>
+                        <input type="number" class="form-control" id="lebarAlas" placeholder="Masukkan Lebar Alas">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tinggi Limas</label>
+                        <input type="number" class="form-control" id="tinggiLimas" placeholder="Masukkan Tinggi Limas">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Panjang Sisi Alas</label>
+                        <input type="number" class="form-control" id="panjangSisiAlas" placeholder="Masukkan Panjang Sisi Alas">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Sisi Tegak (s)</label>
+                        <input type="number" class="form-control" id="sisiTegak" placeholder="Masukkan Panjang Sisi Tegak">
+                    </div>
+                    <div>
+                        <button type="button" onclick="VolumeLimas()" class="btn btn-primary">Volume</button>
+                        <button type="button" onclick="LuasLimas()" class="btn btn-primary">Luas</button>
+                        <button type="button" onclick="KelilingLimas()" class="btn btn-primary">Keliling</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h4>Hasil</h4>
+                <p id="tampilkanHasilLimas"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="p-3 mb-2 bg-black text-white text-center mt-5">&copy Cendy Alviano All Right Reserved</div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        // Kubus
+        function Volume() {
+            const panjang = $('#panjang').val();
+            const lebar = $('#lebar').val();
+            const tinggi = $('#tinggi').val();
+            const hasil = parseInt(panjang) * parseInt(lebar) * parseInt(tinggi);
+            $("#tampilkanHasil").html(`<h5>Volume: ${hasil}</h5><h5>Contoh:</h5><p>Jika Panjang = 1, Lebar = 4, Tinggi = 5<br>1 x 4 x 5 = 20</p>`);
+        }
+    
+        function Luas() {
+            const panjang = $('#panjang').val();
+            const lebar = $('#lebar').val();
+            const tinggi = $('#tinggi').val();
+            const hasil = 2 * (parseInt(panjang) * parseInt(lebar) + parseInt(panjang) * parseInt(tinggi) + parseInt(lebar) * parseInt(tinggi));
+            $("#tampilkanHasil").html(`<h5>Luas: ${hasil}</h5><h5>Contoh:</h5><p>Jika Panjang = 1, Lebar = 4, Tinggi = 5<br>2 x (1x4 + 1x5 + 4x5) = 58</p>`);
+        }
+    
+        function Keliling() {
+            const panjang = $('#panjang').val();
+            const lebar = $('#lebar').val();
+            const tinggi = $('#tinggi').val();
+            const hasil = 4 * (parseInt(panjang) + parseInt(lebar) + parseInt(tinggi));
+            $("#tampilkanHasil").html(`<h5>Keliling: ${hasil}</h5><h5>Contoh:</h5><p>Jika Panjang = 1, Lebar = 4, Tinggi = 5<br>4 x (1 + 4 + 5) = 40</p>`);
+        }
+    
+        // Tabung
+        function VolumeTabung() {
+            const jariJari = $('#jariJari').val();
+            const tinggi = $('#tinggiTabung').val();
+            const hasil = Math.PI * Math.pow(parseInt(jariJari), 2) * parseInt(tinggi);
+            $("#tampilkanHasilTabung").html(`<h5>Volume: ${hasil.toFixed(2)}</h5><h5>Contoh:</h5><p>Jika Jari-Jari = 3, Tinggi = 5<br>π x 3² x 5 = ${Math.PI * 3 * 3 * 5}</p>`);
+        }
+    
+        function LuasTabung() {
+            const jariJari = $('#jariJari').val();
+            const tinggi = $('#tinggiTabung').val();
+            const hasil = 2 * Math.PI * parseInt(jariJari) * (parseInt(jariJari) + parseInt(tinggi));
+            $("#tampilkanHasilTabung").html(`<h5>Luas: ${hasil.toFixed(2)}</h5><h5>Contoh:</h5><p>Jika Jari-Jari = 3, Tinggi = 5<br>2 x π x 3 x (3 + 5) = ${2 * Math.PI * 3 * (3 + 5)}</p>`);
+        }
+    
+        function KelilingTabung() {
+            const jariJari = $('#jariJari').val();
+            const hasil = 2 * Math.PI * parseInt(jariJari);
+            $("#tampilkanHasilTabung").html(`<h5>Keliling: ${hasil.toFixed(2)}</h5><h5>Contoh:</h5><p>Jika Jari-Jari = 3<br>2 x π x 3 = ${2 * Math.PI * 3}</p>`);
+        }
+    
+        // Bola
+        function VolumeBola() {
+            const jariJari = $('#jariJariBola').val();
+            const hasil = (4/3) * Math.PI * Math.pow(parseInt(jariJari), 3);
+            $("#tampilkanHasilBola").html(`<h5>Volume: ${hasil.toFixed(2)}</h5><h5>Contoh:</h5><p>Jika Jari-Jari = 3<br>(4/3) x π x 3³ = ${((4/3) * Math.PI * 27).toFixed(2)}</p>`);
+        }
+    
+        function LuasBola() {
+            const jariJari = $('#jariJariBola').val();
+            const hasil = 4 * Math.PI * Math.pow(parseInt(jariJari), 2);
+            $("#tampilkanHasilBola").html(`<h5>Luas: ${hasil.toFixed(2)}</h5><h5>Contoh:</h5><p>Jika Jari-Jari = 3<br>4 x π x 3² = ${4 * Math.PI * 9}</p>`);
+        }
+    
+        function KelilingBola() {
+            const jariJari = $('#jariJariBola').val();
+            const hasil = 2 * Math.PI * parseInt(jariJari);
+            $("#tampilkanHasilBola").html(`<h5>Keliling: ${hasil.toFixed(2)}</h5><h5>Contoh:</h5><p>Jika Jari-Jari = 3<br>2 x π x 3 = ${2 * Math.PI * 3}</p>`);
+        }
+    
+        // Limas
+        function VolumeLimas() {
+            const panjangAlas = $('#panjangAlas').val();
+            const lebarAlas = $('#lebarAlas').val();
+            const tinggiLimas = $('#tinggiLimas').val();
+            const luasAlas = parseInt(panjangAlas) * parseInt(lebarAlas);
+            const hasil = (1/3) * luasAlas * parseInt(tinggiLimas);
+            $("#tampilkanHasilLimas").html(`<h5>Volume: ${hasil.toFixed(2)}</h5><h5>Contoh:</h5><p>Jika Panjang Alas = 4, Lebar Alas = 3, Tinggi = 5<br>(1/3) x 4 x 3 x 5 = ${((1/3) * 4 * 3 * 5).toFixed(2)}</p>`);
+        }
+    
+        function LuasLimas() {
+            const panjangAlas = $('#panjangAlas').val();
+            const lebarAlas = $('#lebarAlas').val();
+            const tinggiLimas = $('#tinggiLimas').val();
+            const panjangSisiAlas = $('#panjangSisiAlas').val();
+            const sisiTegak = $('#sisiTegak').val();
+    
+            const luasAlas = parseInt(panjangAlas) * parseInt(lebarAlas);
+            const kelilingAlas = 2 * (parseInt(panjangAlas) + parseInt(lebarAlas));
+            const luasSisi = 0.5 * kelilingAlas * parseInt(sisiTegak);
+    
+            const hasil = luasAlas + luasSisi;
+            $("#tampilkanHasilLimas").html(`<h5>Luas: ${hasil.toFixed(2)}</h5><h5>Contoh:</h5><p>Jika Panjang Alas = 4, Lebar Alas = 3, Panjang Sisi Alas = 4, Sisi Tegak = 5<br>Luas Alas + 1/2 x Keliling Alas x Sisi Tegak = ${luasAlas} + 0.5 x ${kelilingAlas} x ${sisiTegak} = ${luasAlas + 0.5 * kelilingAlas * sisiTegak}</p>`);
+        }
+    
+        function KelilingLimas() {
+            const panjangSisiAlas = $('#panjangSisiAlas').val();
+            const jumlahSisiAlas = 4; // Asumsi limas segi empat, jumlah sisi alas adalah 4
+            const hasil = jumlahSisiAlas * parseInt(panjangSisiAlas);
+            $("#tampilkanHasilLimas").html(`<h5>Keliling: ${hasil}</h5><h5>Contoh:</h5><p>Jika Panjang Sisi Alas = 4<br>${jumlahSisiAlas} x 4 = ${hasil}</p>`);
+        }
+    </script>
+    
+</body>
+</html>
